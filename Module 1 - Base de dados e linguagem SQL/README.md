@@ -27,7 +27,7 @@ LOCATION 's3://ebac-rafaelrosa-modulo-1/'
 ### **2 - Explorando os dados da tabela de clientes**
 ---
 
-#### [**Query 1:**](##URL query)
+#### [**Query 1:**] [Results](https://www.linkedin.com/in/rafael-rosa-alves/)
 ```sql
 SELECT * FROM clientes
 ```
