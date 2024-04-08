@@ -87,5 +87,14 @@ ALTER TABLE clientes ADD COLUMNS (estado string)
 ```sql
 SELECT * from clientes
 ```
-
 ---
+### **5 - Results**: <br>
+
+#### **Query 1:**
+#### **Query 2:**
+#### **Query 3:**
+#### **Query 4:**
+#### **Query 5:**
+#### **Query 6:**
+#### **Query 7:**
+
