@@ -14,11 +14,7 @@ SELECT id, idade, sexo, dependentes FROM clientes;
 #### Query 2
 
 ```sql
-SELECT id,
-	valor_transacoes_12m
-FROM clientes
-WHERE escolaridade = 'mestrado'
-	and sexo = 'F';
+SELECT id, valor_transacoes_12m FROM clientes WHERE escolaridade = 'mestrado' and sexo = 'F';
 ```
 #### Query 3
 ```sql
