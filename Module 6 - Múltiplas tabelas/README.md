@@ -58,7 +58,7 @@ SELECT id_cliente FROM transacoes UNION SELECT id_cliente FROM cliente;
 
 #### **Query 2:**
 ```sql
-SELECT transacoes.id_cliente,	cliente.nome FROM transacoes INNER JOIN cliente ON transacoes.id_cliente = cliente.id_cliente;
+SELECT transacoes.id_cliente,cliente.nome FROM transacoes INNER JOIN cliente ON transacoes.id_cliente = cliente.id_cliente;
 ```
 #### **Query 3:**
 ```sql
