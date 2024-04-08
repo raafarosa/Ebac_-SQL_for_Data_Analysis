@@ -61,7 +61,7 @@ WITH SERDEPROPERTIES (
 	'escapeChar' = '\\'
 )
 STORED AS TEXTFILE
-LOCATION 'aaaaaaaaaaaaa'
+LOCATION 'ebac-rafaelrosa-partitioned'
 ```
 ```sql
 MSCK REPAIR TABLE clientes_part;
