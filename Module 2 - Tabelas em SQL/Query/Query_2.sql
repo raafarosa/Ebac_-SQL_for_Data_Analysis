@@ -1,1 +1,1 @@
-SELECT id, 	valor_transacoes_12m FROM clientes WHERE escolaridade = 'mestrado' 	and sexo = 'F';
+SELECT id, valor_transacoes_12m FROM clientes WHERE escolaridade = 'mestrado' 	and sexo = 'F';
