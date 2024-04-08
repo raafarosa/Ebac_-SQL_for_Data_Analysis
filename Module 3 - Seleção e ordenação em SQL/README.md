@@ -1,53 +1,25 @@
 [![](https://raw.githubusercontent.com/raafarosa/Ebac_Data_Scientist_General/main/utilities/newebac_logo_black_half.png)](https://github.com/raafarosa/Ebac_SQL_for_Data_Analysis)
 ---
-# **Módulo 2** | Trabalhando com Tabelas
+# **Módulo 3** | Seleção e ordenação em SQL
 
 **Aluno:** [Rafael Rosa](https://www.linkedin.com/in/rafael-rosa-alves/)<br>
 
 ---
 
-### [Link para Querys](https://github.com/raafarosa/Ebac_SQL_for_Data_Analysis/tree/main/Module%202%20-%20Tabelas%20em%20SQL/Query) <br>
-### [Link para Results](https://github.com/raafarosa/Ebac_SQL_for_Data_Analysis/tree/main/Module%202%20-%20Tabelas%20em%20SQL/Results)
+### [Link para Querys](https://github.com/raafarosa/Ebac_SQL_for_Data_Analysis/tree/main/Module%203%20-%20Sele%C3%A7%C3%A3o%20e%20ordena%C3%A7%C3%A3o%20em%20SQL/Query) <br>
+### [Link para Results](https://github.com/raafarosa/Ebac_SQL_for_Data_Analysis/tree/main/Module%203%20-%20Sele%C3%A7%C3%A3o%20e%20ordena%C3%A7%C3%A3o%20em%20SQL/Results)
 
 ---
-### **1 - Explorando os dados da tabela de clientes**: <br>
+### **1 - Explorando os dados**: <br>
 #### **Query 1:**
 
 ```sql
-SELECT id, idade, sexo, dependentes FROM clientes;
-```
-#### **Query 2:**
-
-```sql
-SELECT id, valor_transacoes_12m FROM clientes WHERE escolaridade = 'mestrado' and sexo = 'F';
-```
-#### **Query 3:**
-```sql
-SELECT sexo, AVG(idade) AS "media_idade_por_sexo" FROM clientes GROUP BY sexo;
-```
----
-### **2 - Inserindo novos dados**:
-
-#### **Query 4:** <br>
-```sql
-SELECT * FROM clientes;
-```
----
-### **3 - Criando e trabalhando com partições**:
-
-#### **Query 5:** <br>
-```sql
-CREATE EXTERNAL TABLE clientes_part(
-	id BIGINT,
-	idade BIGINT,
-	dependentes BIGINT,
-	escolaridade STRING,
-	tipo_cartao STRING,
-	limite_credito DOUBLE,
-	valor_transacoes_12m DOUBLE,
-	qtd_transacoes_12m BIGINT
+CREATE EXTERNAL TABLE transacoes (
+	id_cliente BIGINT,
+	id_transacao BIGINT,
+	valor FLOAT,
+	id_loja STRING
 )
-PARTITIONED BY (sexo string)
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
 WITH SERDEPROPERTIES (
 	'separatorChar' = ',',
@@ -55,34 +27,25 @@ WITH SERDEPROPERTIES (
 	'escapeChar' = '\\'
 )
 STORED AS TEXTFILE
-LOCATION 'ebac-rafaelrosa-partitioned'
+LOCATION 's3://ebac-rafaelrosa-transacoes'
 ```
-```sql
-MSCK REPAIR TABLE clientes_part;
-```
-```sql
-select * from clientes_part where sexo = 'F';
-```
+#### **Query 2:**
 
-#### **Query 6:** <br>
 ```sql
-SELECT id,idade,limite_credito FROM clientes_part WHERE sexo = 'M' ORDER BY limite_credito DESC;
+SELECT * FROM transacoes
+```
+#### **Query 3:**
+```sql
+SELECT id_cliente, valor, id_loja AS nome_loja FROM transacoes;
+```
+### **2 - Ordenando e limitando dados**: <br>
+
+#### **Query 4:** <br>
+```sql
+SELECT id_cliente, valor FROM transacoes ORDER BY valor DESC LIMIT 2;
 ```
 ---
-
-### **4 - Adicionando colunas:**
-
-#### **Query 7:**
-
-```sql
-ALTER TABLE clientes ADD COLUMNS (estado string)
-```
-#### **Base query:**
-```sql
-SELECT * from clientes
-```
----
-### **5 - Results**: <br>
+### **3 - Results**: <br>
 
 #### **Result 1:**
 
