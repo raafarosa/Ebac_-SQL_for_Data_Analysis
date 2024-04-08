@@ -28,6 +28,8 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION 's3://ebac-rafaelrosa-transacoes'
 ```
+---
+
 ### **2 - Explorando os dados**: <br>
 
 #### **Query 1:**
