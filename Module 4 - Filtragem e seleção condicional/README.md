@@ -88,39 +88,68 @@ FROM transacoes;
 ### **5 - Results**: <br>
 
 #### **Result 1:**
-
-
-
+|id_cliente|id_transacao|valor |id_loja|
+|----------|------------|------|-------|
+|1         |768805383   |50.74 |magalu |
+|1         |76856563    |2000.9|magalu |
 
 ----
 
 #### **Result 2:**
-
-
-
+|id_cliente|id_transacao|valor |id_loja|
+|----------|------------|------|-------|
+|1         |768805383   |50.74 |magalu |
+|2         |768805399   |30.9  |giraffas|
+|3         |818770008   |110.0 |postoshell|
+|1         |76856563    |2000.9|magalu |
+|4         |764545534   |50.74 |extra  |
+|3         |8154567758  |1100.0|shopee |
 
 ---
 
 #### **Result 3:**
-
-
-
+|id_cliente|id_transacao|valor |id_loja|
+|----------|------------|------|-------|
+|1         |768805383   |50.74 |magalu |
+|1         |76856563    |2000.9|magalu |
+|1         |767573759   |15.7  |subway |
 
 ---
 
 #### **Result 4:**
-
-
-
+|id_cliente|id_transacao|valor |id_loja|
+|----------|------------|------|-------|
+|3         |818770008   |110.0 |postoshell|
 
 ---
 
 #### **Result 5:**
+|id_cliente|id_transacao|valor |id_loja|
+|----------|------------|------|-------|
+|1         |768805383   |50.74 |magalu |
+|1         |76856563    |2000.9|magalu |
 
 ---
 
 #### **Result 6:**
+|id_cliente|id_transacao|valor |id_loja|
+|----------|------------|------|-------|
+|3         |818770008   |110.0 |postoshell|
+|3         |8154567758  |1100.0|shopee |
 
 ---
 
 #### **Result 7:**
+|id_cliente|id_loja  |valor |classeValor|tipo_compra|
+|----------|---------|------|-----------|-----------|
+|1         |magalu   |50.74 |Compra com baixo valor|variedade  |
+|2         |giraffas |30.9  |Compra com baixo valor|alimentacao|
+|3         |postoshell|110.0 |Compra com baixo valor|24horas    |
+|1         |magalu   |2000.9|Compra com alto valor|variedade  |
+|1         |subway   |15.7  |Compra com baixo valor|alimentacao|
+|3         |seveneleven|2.99  |Compra com baixo valor|24horas    |
+|4         |extra    |50.74 |Compra com baixo valor|variedade  |
+|5         |subway   |10.0  |Compra com baixo valor|alimentacao|
+|3         |shopee   |1100.0|Compra com alto valor|outros     |
+
+---
