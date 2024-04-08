@@ -10,7 +10,7 @@
 ### [Link para Results](https://github.com/raafarosa/Ebac_SQL_for_Data_Analysis/tree/main/Module%203%20-%20Sele%C3%A7%C3%A3o%20e%20ordena%C3%A7%C3%A3o%20em%20SQL/Results)
 
 ---
-### **1 - Explorando os dados**: <br>
+### **1 - Criação do database**: <br>
 
 ```sql
 CREATE EXTERNAL TABLE transacoes (
@@ -28,6 +28,8 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION 's3://ebac-rafaelrosa-transacoes'
 ```
+### **2 - Explorando os dados**: <br>
+
 #### **Query 1:**
 
 ```sql
@@ -43,7 +45,7 @@ SELECT DISTINCT id_loja AS nome_loja FROM transacoes;
 ```
 ---
 
-### **2 - Ordenando e limitando dados**: <br>
+### **3 - Ordenando e limitando dados**: <br>
 
 #### **Query 4:** <br>
 ```sql
