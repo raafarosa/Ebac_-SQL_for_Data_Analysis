@@ -1,0 +1,1 @@
+SELECT id, idade, sexo, dependentes FROM clientes;
