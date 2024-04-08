@@ -1,6 +1,6 @@
 [![](https://raw.githubusercontent.com/raafarosa/Ebac_Data_Scientist_General/main/utilities/newebac_logo_black_half.png)](https://github.com/raafarosa/Ebac_SQL_for_Data_Analysis)
 ---
-# **Módulo 4** | Filtragem e seleção condicional
+# **Módulo 7** | Técnicas avançadas
 
 **Aluno:** [Rafael Rosa](https://www.linkedin.com/in/rafael-rosa-alves/)<br>
 
