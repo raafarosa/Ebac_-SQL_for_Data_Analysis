@@ -1,1 +1,1 @@
-SELECT id, valor_transacoes_12m FROM clientes WHERE escolaridade = 'mestrado' 	and sexo = 'F';
+SELECT COUNT(age) AS QUANTIDADE_LINHAS FROM heartattack;

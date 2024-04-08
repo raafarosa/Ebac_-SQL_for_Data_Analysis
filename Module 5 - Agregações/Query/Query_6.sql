@@ -1,1 +1,1 @@
-SELECT id,idade,limite_credito FROM clientes_part WHERE sexo = 'M' ORDER BY limite_credito DESC;
+SELECT COUNT(output), output, sex FROM heartattack GROUP BY output, sex HAVING COUNT(output) > 25;

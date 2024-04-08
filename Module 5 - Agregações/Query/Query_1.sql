@@ -1,1 +1,1 @@
-SELECT id, idade, sexo, dependentes FROM clientes;
+SELECT * FROM heartattack limit 10;

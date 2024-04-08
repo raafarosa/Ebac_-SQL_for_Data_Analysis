@@ -1,1 +1,1 @@
-SELECT sexo, AVG(idade) AS "media_idade_por_sexo" FROM clientes GROUP BY sexo;
+SELECT COUNT(age) AS QUANTIDADE, CASE WHEN output = 1 THEN 'more chance of heart attack' ELSE 'less chance of heart attack' END AS output FROM heartattack GROUP BY output;

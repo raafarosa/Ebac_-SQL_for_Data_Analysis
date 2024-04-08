@@ -1,1 +1,1 @@
-SELECT * FROM clientes;
+SELECT MAX(age),MIN(age),AVG(age), output FROM heartattack GROUP BY output;
