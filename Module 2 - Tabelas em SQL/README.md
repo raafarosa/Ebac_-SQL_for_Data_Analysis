@@ -79,7 +79,7 @@ SELECT * from clientes
 ---
 ### **5 - Results**: <br>
 
-#### **Query 1:**
+#### **Result 1:**
 
 | id        | idade | sexo | dependentes |
 |-----------|-------|------|---|
@@ -89,7 +89,7 @@ SELECT * from clientes
 
 ----
 
-#### **Query 2:**
+#### **Result 2:**
 
 | id        | valor_transacoes_12m |
 |-----------|--------------------|
@@ -97,7 +97,7 @@ SELECT * from clientes
 
 ---
 
-#### **Query 3:**
+#### **Result 3:**
 
 | sexo | media_idade_por_sexo |
 |------|----------------------|
@@ -106,7 +106,7 @@ SELECT * from clientes
 
 ---
 
-#### **Query 4:**
+#### **Result 4:**
 
 |id       |idade|sexo|dependentes|escolaridade|tipo_cartao|limite_credito|valor_transacoes_12m|qtd_transacoes_12m|
 |---------|-----|----|-----------|------------|-----------|--------------|--------------------|------------------|
@@ -119,7 +119,7 @@ SELECT * from clientes
 
 ---
 
-#### **Query 5:**
+#### **Result 5:**
 
 |	id	|idade|	dependentes	|escolaridade|	tipo_cartao	|limite_credito	|valor_transacoes_12m	|qtd_transacoes_12m	|sexo|
 |---|-|-|-|-|-|-|-|-|
@@ -129,7 +129,7 @@ SELECT * from clientes
 
 ---
 
-#### **Query 6:**
+#### **Result 6:**
 
 |id       |idade|limite_credito|
 |---------|-----|--------------|
@@ -140,7 +140,7 @@ SELECT * from clientes
 
 ---
 
-#### **Query 7:**
+#### **Result 7:**
 
 |id       |idade|sexo|dependentes|escolaridade|tipo_cartao|limite_credito|valor_transacoes_12m|qtd_transacoes_12m|estado|
 |---------|-----|----|-----------|------------|-----------|--------------|--------------------|------------------|------|
