@@ -49,75 +49,59 @@ SELECT id_cliente, valor FROM transacoes ORDER BY valor DESC LIMIT 2;
 
 #### **Result 1:**
 
-| id        | idade | sexo | dependentes |
-|-----------|-------|------|---|
-| 768805383 | 45    | M    | 3 | 
-| 818770008 | 49    | F    | 5 | 
-| 713982108 | 51    | M    | 3 |
+|id_cliente|id_transacao|valor |id_loja    |
+|----------|------------|------|-----------|
+|1         |768805383   |50.74 |magalu     |
+|2         |768805399   |30.9  |giraffas   |
+|3         |818770008   |110.0 |postoshell |
+|1         |76856563    |2000.9|magalu     |
+|1         |767573759   |15.7  |subway     |
+|3         |818575758   |2.99  |seveneleven|
+|4         |764545534   |50.74 |extra      |
+|5         |76766789    |10.0  |subway     |
+|3         |8154567758  |1100.0|shopee     |
+
 
 ----
 
 #### **Result 2:**
 
-| id        | valor_transacoes_12m |
-|-----------|--------------------|
-| 818770008 |1291.45    |
+|id_cliente|valor     |nome_loja|
+|----------|----------|---------|
+|1         |50.74     |magalu   |
+|2         |30.9      |giraffas |
+|3         |110.0     |postoshell|
+|1         |2000.9    |magalu   |
+|1         |15.7      |subway   |
+|3         |2.99      |seveneleven|
+|4         |50.74     |extra    |
+|5         |10.0      |subway   |
+|3         |1100.0    |shopee   |
+
 
 ---
 
 #### **Result 3:**
 
-| sexo | media_idade_por_sexo |
-|------|----------------------|
-| F    | 49                   |
-| M    | 48                   |
+|nome_loja|
+|---------|
+|seveneleven|
+|giraffas |
+|magalu   |
+|postoshell|
+|extra    |
+|subway   |
+|shopee   |
+
 
 ---
 
 #### **Result 4:**
 
-|id       |idade|sexo|dependentes|escolaridade|tipo_cartao|limite_credito|valor_transacoes_12m|qtd_transacoes_12m|
-|---------|-----|----|-----------|------------|-----------|--------------|--------------------|------------------|
-|768805383|45   |M   |3          |ensino medio|blue       |12691.51      |1144.9              |42                |
-|818770008|49   |F   |5          |mestrado    |solteiro   |8256.96       |1291.45             |33                |
-|713982108|51   |M   |3          |mestrado    |casado     |3418.56       |1887.72             |20                |
-|768805451|56   |M   |6          |ensino medio|casado     |7591.51       |1564.9              |50                |
-|456556   |30   |F   |0          |mestrado    |solteiro   |5526.96       |55251.45            |10                |
-|545      |49   |F   |2          |doutorado   |blue       |3417.55       |555.72              |7                 |
-
----
-
-#### **Result 5:**
-
-|	id	|idade|	dependentes	|escolaridade|	tipo_cartao	|limite_credito	|valor_transacoes_12m	|qtd_transacoes_12m	|sexo|
-|---|-|-|-|-|-|-|-|-|
-| 456556|	30|	0|	mestrado|	solteiro|	5526.96|	55251.45	|10|	F|
-|	545	|49|	2|	doutorado|	blue	|3417.55|	555.72	|7|	F|
-|	818770008	|49|	5 |	mestrado|	solteiro|		8256.96|	1291.45|	33|	F|
-
----
-
-#### **Result 6:**
-
-|id       |idade|limite_credito|
-|---------|-----|--------------|
-|768805383|45   |12691.51      |
-|768805451|56   |7591.51       |
-|713982108|51   |3418.56       |
-
-
----
-
-#### **Result 7:**
-
-|id       |idade|sexo|dependentes|escolaridade|tipo_cartao|limite_credito|valor_transacoes_12m|qtd_transacoes_12m|estado|
-|---------|-----|----|-----------|------------|-----------|--------------|--------------------|------------------|------|
-|768805451|56   |M   |6          |ensino medio|casado     |7591.51       |1564.90             |50                |      |
-|456556   |30   |F   |0          |mestrado    |solteiro   |5526.96       |55251.45            |10                |      |
-|545      |49   |F   |2          |doutorado   |blue       |3417.55       |555.72              |7                 |      |
-|768805383|45   |M   |3          |ensino medio|blue       |12691.51      |1144.90             |42                |      |
-|818770008|49   |F   |5          |mestrado    |solteiro   |8256.96       |1291.45             |33                |      |
-|713982108|51   |M   |3          |mestrado    |casado     |3418.56       |1887.72             |20                |      |
+|id_cliente|valor |
+|----------|------|
+|1         |2000.9|
+|3         |1100.0|
 
 
 ---
