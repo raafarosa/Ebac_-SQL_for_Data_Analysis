@@ -18,10 +18,7 @@ SELECT id, valor_transacoes_12m FROM clientes WHERE escolaridade = 'mestrado' an
 ```
 #### Query 3
 ```sql
-SELECT sexo,
-	AVG(idade) AS "media_idade_por_sexo"
-FROM clientes
-GROUP BY sexo;
+SELECT sexo, AVG(idade) AS "media_idade_por_sexo" FROM clientes GROUP BY sexo;
 ```
 ---
 ### **2 - Inserindo novos dados**:
