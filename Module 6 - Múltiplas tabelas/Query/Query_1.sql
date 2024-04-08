@@ -1,1 +1,1 @@
-SELECT id, idade, sexo, dependentes FROM clientes;
+SELECT id_cliente FROM transacoes UNION SELECT id_cliente FROM cliente;

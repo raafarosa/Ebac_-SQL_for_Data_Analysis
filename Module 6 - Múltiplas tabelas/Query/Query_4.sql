@@ -1,1 +1,1 @@
-SELECT * FROM clientes;
+SELECT * FROM transacoes LEFT JOIN cliente ON cliente.id_cliente = transacoes.id_cliente;
