@@ -6,17 +6,17 @@
 
 ---
 ### **1 - Explorando os dados da tabela de clientes**: <br>
-#### Query 1
+#### **Query 1:**
 
 ```sql
 SELECT id, idade, sexo, dependentes FROM clientes;
 ```
-#### Query 2
+#### **Query 2:**
 
 ```sql
 SELECT id, valor_transacoes_12m FROM clientes WHERE escolaridade = 'mestrado' and sexo = 'F';
 ```
-#### Query 3
+#### **Query 3:**
 ```sql
 SELECT sexo, AVG(idade) AS "media_idade_por_sexo" FROM clientes GROUP BY sexo;
 ```
