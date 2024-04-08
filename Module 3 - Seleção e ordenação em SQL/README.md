@@ -11,7 +11,6 @@
 
 ---
 ### **1 - Explorando os dados**: <br>
-#### **Query 1:**
 
 ```sql
 CREATE EXTERNAL TABLE transacoes (
@@ -29,14 +28,18 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION 's3://ebac-rafaelrosa-transacoes'
 ```
-#### **Query 2:**
+#### **Query 1:**
 
 ```sql
 SELECT * FROM transacoes
 ```
-#### **Query 3:**
+#### **Query 2:**
 ```sql
 SELECT id_cliente, valor, id_loja AS nome_loja FROM transacoes;
+```
+#### **Query 3:**
+```sql
+SELECT DISTINCT id_loja AS nome_loja FROM transacoes;
 ```
 ---
 
