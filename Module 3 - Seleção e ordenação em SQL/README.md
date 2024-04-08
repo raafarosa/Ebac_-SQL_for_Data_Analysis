@@ -38,6 +38,8 @@ SELECT * FROM transacoes
 ```sql
 SELECT id_cliente, valor, id_loja AS nome_loja FROM transacoes;
 ```
+---
+
 ### **2 - Ordenando e limitando dados**: <br>
 
 #### **Query 4:** <br>
