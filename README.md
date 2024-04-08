@@ -14,4 +14,7 @@
 - [x] Módulo 8 - Projeto Final
 </details>
 
+# Projeto final:
+  > [![Jupyter](https://img.shields.io/badge/Jupyter-F37626.svg?&logo=Jupyter&logoColor=white)](https://github.com/raafarosa/Ebac_SQL_for_Data_Analysis/blob/main/Module%208%20-%20Projeto%20final/Module_8_Final_Project_Rafael_Rosa.ipynb) <br>
+
 ---
