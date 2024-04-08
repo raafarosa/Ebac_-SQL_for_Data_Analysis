@@ -5,6 +5,11 @@
 **Aluno:** [Rafael Rosa](https://www.linkedin.com/in/rafael-rosa-alves/)<br>
 
 ---
+
+### [Link para Querys](https://github.com/raafarosa/Ebac_SQL_for_Data_Analysis/tree/main/Module%202%20-%20Tabelas%20em%20SQL/Query) <br>
+### [Link para Results](https://github.com/raafarosa/Ebac_SQL_for_Data_Analysis/tree/main/Module%202%20-%20Tabelas%20em%20SQL/Results)
+
+---
 ### **1 - Explorando os dados da tabela de clientes**: <br>
 #### **Query 1:**
 
