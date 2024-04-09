@@ -1,1 +1,7 @@
-SELECT id, valor_transacoes_12m FROM clientes WHERE escolaridade = 'mestrado' 	and sexo = 'F';
+SELECT *
+FROM transacoes_part
+WHERE id_loja = 'magalu';
+
+SELECT *
+FROM transacoes
+WHERE id_loja = 'magalu';

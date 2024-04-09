@@ -1,1 +1,0 @@
-SELECT id,idade,limite_credito FROM clientes_part WHERE sexo = 'M' ORDER BY limite_credito DESC;

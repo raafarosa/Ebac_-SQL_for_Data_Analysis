@@ -1,4 +1,4 @@
-"id_cliente","id_transacao","valor","id_loja"
-"1","768805383","50.74","magalu"
-"1","76856563","2000.9","magalu"
-"1","767573759","15.7","subway"
+"id_cliente","valor_compra","nome_loja"
+"3","110.0","postoshell"
+"1","2000.9","magalu"
+"3","1100.0","shopee"

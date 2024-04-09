@@ -1,1 +1,0 @@
-ALTER TABLE clientes ADD COLUMNS (estado string)
