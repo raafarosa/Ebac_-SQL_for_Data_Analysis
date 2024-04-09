@@ -25,7 +25,7 @@ WITH SERDEPROPERTIES (
 	'serialization.format' = ',',
 	'field.delim' = ','
 )
-LOCATION 's3://modulo6-rafaelrosa-ebac/cliente/'
+LOCATION 's3://module7-rafaelrosa-ebac/cliente/'
 TBLPROPERTIES ('has_encrypted_data' = 'false');
 ```
 
@@ -33,7 +33,7 @@ TBLPROPERTIES ('has_encrypted_data' = 'false');
 ---Base Transacoes
 CREATE EXTERNAL TABLE IF NOT EXISTS default.transacoes (
 	`id_cliente` int,
-	`id_transacao` int,
+	`id_transacao` bigint,
 	`valor_compra` double,
 	`id_loja` string
 )
@@ -42,38 +42,90 @@ WITH SERDEPROPERTIES (
 	'serialization.format' = ',',
 	'field.delim' = ','
 )
-LOCATION 's3://modulo6-rafaelrosa-ebac/transacoes/'
+LOCATION 's3://module7-rafaelrosa-ebac/transacoes/'
 TBLPROPERTIES ('has_encrypted_data' = 'false');
 ```
 ---
 
-### **2 - Explorando dados com a função UNION**: <br>
+### **2 - Subqueries**: <br>
 
 #### **Query 1:**
 ```sql
-SELECT id_cliente FROM transacoes UNION SELECT id_cliente FROM cliente;
+SELECT id_loja,
+	id_cliente,
+	id_transacao
+FROM transacoes
+WHERE id_loja IN (
+		SELECT cliente.loja_cadastro
+		FROM cliente
+		WHERE cliente.valor_compra > 160
+	);
 ```
 ---
-### **3 - Explorando dados com as Junções inner/cross**: <br>
+### **3 - Particionamento**: <br>
+
+```sql
+CREATE EXTERNAL TABLE transacoes_part(
+	id_cliente BIGINT,
+	id_transacoes BIGINT,
+	valor DOUBLE
+)
+PARTITIONED BY (id_loja string)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
+WITH SERDEPROPERTIES (
+	'serialization.format' = ',',
+	'field.delim' = ','
+)
+LOCATION 's3://transacoes-partition-rafaelrosa/';
+```
+
+```sql
+MSCK REPAIR TABLE transacoes_part;
+```
+
+```sql
+select count(*) from transacoes;
+select count(*) from transacoes_part;
+```
 
 #### **Query 2:**
 ```sql
-SELECT transacoes.id_cliente,cliente.nome FROM transacoes INNER JOIN cliente ON transacoes.id_cliente = cliente.id_cliente;
+SELECT *
+FROM transacoes_part
+WHERE id_loja = 'magalu';
 ```
-#### **Query 3:**
 ```sql
-SELECT * FROM cliente CROSS JOIN transacoes;
+SELECT *
+FROM transacoes
+WHERE id_loja = 'magalu';
 ```
+
 ---
 ### **4 - Explorando dados com as Junções: left/right**: <br>
 
-#### **Query 4:**
+#### **Query 3:**
 ```sql
-SELECT * FROM transacoes LEFT JOIN cliente ON cliente.id_cliente = transacoes.id_cliente;
+CREATE VIEW transacoesV100 AS
+SELECT id_cliente,
+	valor_compra,
+	id_loja AS nome_loja
+FROM transacoes
+WHERE valor_compra > 100;
 ```
-#### **Query 5:** <br>
 ```sql
-SELECT * FROM transacoes RIGHT JOIN cliente ON cliente.id_cliente = transacoes.id_cliente;
+SELECT * FROM transacoesv100;
+```
+#### **Query 4:** <br>
+```sql
+CREATE VIEW clientevalor AS
+SELECT id_cliente,
+	valor_compra
+FROM transacoes
+ORDER BY valor_compra DESC
+LIMIT 2;
+```
+```sql
+SELECT * FROM clientevalor;
 ```
 ---
 ### **5 - Results**: <br>
